@@ -36,7 +36,16 @@ public class GPSLocation extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.location_text);
         b1 = (Button) findViewById(R.id.show_location);
-        b2 = (Button) findViewById(R.id.next_button);
+        b2 = (Button) findViewById(R.id.maps_button);
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(GPSLocation.this, "Checking", Toast.LENGTH_SHORT).show();
+                Intent m = new Intent(getApplicationContext(),MapsActivity.class);
+                startActivity(m);
+            }
+        });
 
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         locationListener = new LocationListener() {
@@ -79,14 +88,6 @@ public class GPSLocation extends AppCompatActivity {
             configureButton();
         }
 
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(GPSLocation.this, "Muh Me Le", Toast.LENGTH_SHORT).show();
-                Intent j = new Intent(GPSLocation.this, MapsActivity.class);
-                startActivity(j);
-            }
-        });
     }
 
     @Override
