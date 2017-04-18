@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (!TextUtils.isEmpty(login.getText().toString()) && !TextUtils.isEmpty(password.getText().toString())) {
                     if (login.getText().toString().equals(id) && password.getText().toString().equals(pass)) {
-                        Intent logged_in = new Intent(getApplicationContext(), Service.class);
+                        Intent logged_in = new Intent(getApplicationContext(), Services.class);
                         startActivity(logged_in);
                     } else {
                         Toast.makeText(MainActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
