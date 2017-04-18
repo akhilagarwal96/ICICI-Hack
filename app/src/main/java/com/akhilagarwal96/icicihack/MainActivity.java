@@ -3,11 +3,8 @@ package com.akhilagarwal96.icicihack;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import static com.akhilagarwal96.icicihack.R.id.login_password;
 
@@ -19,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     String id = "icicilogin";
     String pass = "12345";
 
-    String l,p;
+    String l, p;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +30,16 @@ public class MainActivity extends AppCompatActivity {
         l = login.getText().toString();
         p = password.getText().toString();
 
+        Intent logged_in = new Intent(MainActivity.this, Services.class);
+        startActivity(logged_in);
+
+/*
         login_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (!TextUtils.isEmpty(login.getText().toString()) && !TextUtils.isEmpty(password.getText().toString())) {
                     if (login.getText().toString().equals(id) && password.getText().toString().equals(pass)) {
-                        Intent logged_in = new Intent(getApplicationContext(), Service.class);
+                        Intent logged_in = new Intent(getApplicationContext(), Services.class);
                         startActivity(logged_in);
                     } else {
                         Toast.makeText(MainActivity.this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
@@ -48,6 +49,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+*/
     }
 }
-
