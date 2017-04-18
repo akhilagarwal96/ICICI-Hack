@@ -26,4 +26,13 @@
         android:background="@drawable/rectangle"
         android:onClick="stopService"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/show_gps"
+        android:layout_centerInParent="true"
+        android:text="Show Location"
+        android:background="@drawable/rectangle"
+        android:onClick="showLocation"/>
+
 </RelativeLayout>

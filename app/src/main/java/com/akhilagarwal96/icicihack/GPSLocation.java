@@ -18,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class GPSLocation extends AppCompatActivity {
 
@@ -81,6 +82,7 @@ public class GPSLocation extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(GPSLocation.this, "Muh Me Le", Toast.LENGTH_SHORT).show();
                 Intent j = new Intent(GPSLocation.this, MapsActivity.class);
                 startActivity(j);
             }

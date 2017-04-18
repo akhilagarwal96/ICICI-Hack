@@ -28,9 +28,10 @@ public class Services extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_services);
+
     }
-    public void startService(View view){
+    public void startService(final View view){
         Intent i = new Intent(Services.this, Service.class);
         startService(i);
         TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
@@ -53,7 +54,7 @@ public class Services extends AppCompatActivity {
 
                     PendingIntent p_button_intent = PendingIntent.getBroadcast(context, 123, intent, 0);
                     remoteViews.setOnClickPendingIntent(R.id.nb, p_button_intent);
-                    Intent intent1 = new Intent(context, MainActivity.class);
+                    Intent intent1 = new Intent(context, Services.class);
 
                     PendingIntent pendingIntent = PendingIntent.
                             getActivity(context, 0, intent1, 0);
@@ -64,6 +65,8 @@ public class Services extends AppCompatActivity {
                             .setContentIntent(pendingIntent);
 
                     notificationManager.notify(anInt,builder.build());
+                    showLocation(view
+                    );
 
                 }
                 if(state == TelephonyManager.CALL_STATE_OFFHOOK){
@@ -79,5 +82,10 @@ public class Services extends AppCompatActivity {
     public void stopService(View view){
         Intent i = new Intent(Services.this, MyService.class);
         stopService(i);
+    }
+
+    public void showLocation(View view){
+        Intent location = new Intent(Services.this,GPSLocation.class);
+        startActivity(location);
     }
 }
