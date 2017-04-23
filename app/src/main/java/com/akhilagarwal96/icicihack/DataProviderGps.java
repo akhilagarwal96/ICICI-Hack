@@ -37,4 +37,5 @@ public class DataProviderGps {
     public void setAtm(String atm) {
         this.atm = atm;
     }
+
 }

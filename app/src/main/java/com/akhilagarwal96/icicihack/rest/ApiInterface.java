@@ -11,7 +11,8 @@ import retrofit2.http.GET;
 
 public interface ApiInterface {
 
-    @GET("https://retailbanking.mybluemix.net/banking/icicibank/recenttransaction?client_id=rishabh19038@yahoo.in&token=5c2429b90e94&accountno=4722540718014347")
+    @GET("https://retailbanking.mybluemix.net/banking/icicibank/participantmapping?client_id=rishabh19038@yahoo.in&token=5c2429b90e94&accountno=4444777755552421")
     Call<MiniStatement> getMini();
+
 
 }
