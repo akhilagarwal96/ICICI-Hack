@@ -8,82 +8,203 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class MiniStatement {
-    @SerializedName("code")
+
+    @SerializedName("debit card no")
     @Expose
-    private Integer code;
-    @SerializedName("transactiondate")
+    private String debitCardNo;
+    @SerializedName("loan account_no")
     @Expose
-    private String transactiondate;
-    @SerializedName("closing_balance")
+    private String loanAccountNo;
+    @SerializedName("securities_scheme_id")
     @Expose
-    private String closingBalance;
-    @SerializedName("accountno")
+    private String securitiesSchemeId;
+    @SerializedName("cust_id")
     @Expose
-    private String accountno;
-    @SerializedName("credit_debit_flag")
+    private String custId;
+    @SerializedName("account_no")
     @Expose
-    private String creditDebitFlag;
-    @SerializedName("transaction_amount")
+    private String accountNo;
+    @SerializedName("treasury_currency_pair")
     @Expose
-    private String transactionAmount;
-    @SerializedName("remark")
+    private String treasuryCurrencyPair;
+    @SerializedName("treasury_userid")
     @Expose
-    private String remark;
+    private String treasuryUserid;
+    @SerializedName("treasury_cust_id")
+    @Expose
+    private String treasuryCustId;
+    @SerializedName("corpid")
+    @Expose
+    private String corpid;
+    @SerializedName("ucc")
+    @Expose
+    private String ucc;
+    @SerializedName("custid")
+    @Expose
+    private String custid;
+    @SerializedName("rmmobile")
+    @Expose
+    private String rmmobile;
+    @SerializedName("userid")
+    @Expose
+    private String userid;
+    @SerializedName("Policy No")
+    @Expose
+    private String policyNo;
+    @SerializedName("Policy Holder Pan No")
+    @Expose
+    private String policyHolderPanNo;
+    @SerializedName("Policy Holder Email Address")
+    @Expose
+    private String policyHolderEmailAddress;
+    @SerializedName("Policy Holder Dob")
+    @Expose
+    private String policyHolderDob;
+    @SerializedName("Policy Holder Mobile no")
+    @Expose
+    private String policyHolderMobileNo;
 
-    public Integer getCode() {
-        return code;
+    public String getDebitCardNo() {
+        return debitCardNo;
     }
 
-    public void setCode(Integer code) {
-        this.code = code;
+    public void setDebitCardNo(String debitCardNo) {
+        this.debitCardNo = debitCardNo;
     }
 
-    public String getTransactiondate() {
-        return transactiondate;
+    public String getLoanAccountNo() {
+        return loanAccountNo;
     }
 
-    public void setTransactiondate(String transactiondate) {
-        this.transactiondate = transactiondate;
+    public void setLoanAccountNo(String loanAccountNo) {
+        this.loanAccountNo = loanAccountNo;
     }
 
-    public String getClosingBalance() {
-        return closingBalance;
+    public String getSecuritiesSchemeId() {
+        return securitiesSchemeId;
     }
 
-    public void setClosingBalance(String closingBalance) {
-        this.closingBalance = closingBalance;
+    public void setSecuritiesSchemeId(String securitiesSchemeId) {
+        this.securitiesSchemeId = securitiesSchemeId;
     }
 
-    public String getAccountno() {
-        return accountno;
+    public String getCustId() {
+        return custId;
     }
 
-    public void setAccountno(String accountno) {
-        this.accountno = accountno;
+    public void setCustId(String custId) {
+        this.custId = custId;
     }
 
-    public String getCreditDebitFlag() {
-        return creditDebitFlag;
+    public String getAccountNo() {
+        return accountNo;
     }
 
-    public void setCreditDebitFlag(String creditDebitFlag) {
-        this.creditDebitFlag = creditDebitFlag;
+    public void setAccountNo(String accountNo) {
+        this.accountNo = accountNo;
     }
 
-    public String getTransactionAmount() {
-        return transactionAmount;
+    public String getTreasuryCurrencyPair() {
+        return treasuryCurrencyPair;
     }
 
-    public void setTransactionAmount(String transactionAmount) {
-        this.transactionAmount = transactionAmount;
+    public void setTreasuryCurrencyPair(String treasuryCurrencyPair) {
+        this.treasuryCurrencyPair = treasuryCurrencyPair;
     }
 
-    public String getRemark() {
-        return remark;
+    public String getTreasuryUserid() {
+        return treasuryUserid;
     }
 
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setTreasuryUserid(String treasuryUserid) {
+        this.treasuryUserid = treasuryUserid;
     }
 
+    public String getTreasuryCustId() {
+        return treasuryCustId;
+    }
+
+    public void setTreasuryCustId(String treasuryCustId) {
+        this.treasuryCustId = treasuryCustId;
+    }
+
+    public String getCorpid() {
+        return corpid;
+    }
+
+    public void setCorpid(String corpid) {
+        this.corpid = corpid;
+    }
+
+    public String getUcc() {
+        return ucc;
+    }
+
+    public void setUcc(String ucc) {
+        this.ucc = ucc;
+    }
+
+    public String getCustid() {
+        return custid;
+    }
+
+    public void setCustid(String custid) {
+        this.custid = custid;
+    }
+
+    public String getRmmobile() {
+        return rmmobile;
+    }
+
+    public void setRmmobile(String rmmobile) {
+        this.rmmobile = rmmobile;
+    }
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
+    public String getPolicyNo() {
+        return policyNo;
+    }
+
+    public void setPolicyNo(String policyNo) {
+        this.policyNo = policyNo;
+    }
+
+    public String getPolicyHolderPanNo() {
+        return policyHolderPanNo;
+    }
+
+    public void setPolicyHolderPanNo(String policyHolderPanNo) {
+        this.policyHolderPanNo = policyHolderPanNo;
+    }
+
+    public String getPolicyHolderEmailAddress() {
+        return policyHolderEmailAddress;
+    }
+
+    public void setPolicyHolderEmailAddress(String policyHolderEmailAddress) {
+        this.policyHolderEmailAddress = policyHolderEmailAddress;
+    }
+
+    public String getPolicyHolderDob() {
+        return policyHolderDob;
+    }
+
+    public void setPolicyHolderDob(String policyHolderDob) {
+        this.policyHolderDob = policyHolderDob;
+    }
+
+    public String getPolicyHolderMobileNo() {
+        return policyHolderMobileNo;
+    }
+
+    public void setPolicyHolderMobileNo(String policyHolderMobileNo) {
+        this.policyHolderMobileNo = policyHolderMobileNo;
+    }
 }
